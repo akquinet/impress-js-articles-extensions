@@ -214,10 +214,10 @@ article.category li {
 	border-radius: 5px;
 	box-shadow: 0 8px 34px rgba(0, 0, 0, .5);
 	top:555px; 
-	left:95px;
+	left:55px;
 	position:absolute;	
 	padding: 9px 9px 9px 9px;	
-	width: 680px;
+	width: 720px;
 	height: 20px;
 	font-size: 12pt;
 }
@@ -227,7 +227,7 @@ article.category li {
 }
 
 .inputvoting {
-	width: 100px;
+	width: 90px;
 	height: 16px;
 	font-size: 12pt;
 }
