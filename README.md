@@ -29,6 +29,13 @@ Every article, which shall be time limited, needs to contain the following:
 </article>
 
 ### using the voting extension ###
+To be able to vote each person needs an account i.e. username-password-combination. This is managed through a file called auth.conf
+By default it is placed in a folder parallely to the www-root folder. You can change the path to the file in auth_configuration.inc.
+The file contains lines following the scheme "username password timestampOfPasswordCreation".
+
+To add a voting section to an article just add the class name withvoting. The vote.js does the rest for you.
 <article class="slide withvoting">
 [...]
 </article>
+
+
