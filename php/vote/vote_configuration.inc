@@ -6,7 +6,7 @@
  */
 class VoteConfiguration {
 	
-	static $voteResultsRoot = "/opt/presentationSpace/testoutput/vote-data/";
+	static $voteResultsRoot = "/opt/templateProject/vote-data/";
 	function ensurePresenceOfVoteResultsRootDirectory() {
 		if (!file_exists($this::$voteResultsRoot)) {
 			mkdir($this::$voteResultsRoot,0770,true);
