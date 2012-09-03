@@ -20,6 +20,7 @@ By default, articles are optimized in slide format for Safari 5.1.4. They should
 2. run coffee -c js/impress.coffee
 3. adjust the path to the [module]_configuration.inc-file in the beginning of each 
    php/[module]/[module].php you would like to use in your presentation.
+   (feel free to implement a smarter solution for that and send me a pull request ;-)
 4. include your contents in index.html
 5. present, publish, whatever
 
