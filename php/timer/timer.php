@@ -129,16 +129,16 @@ if ("$token" == "$leadToken") {
 	if ($function == "start") {
 		$remaining = startTimerForPage($pagename, $timeout);
 		$remMS = formatMinSec($remaining);
-		print("$remaining >> $remMS");
+		print("$remMS");
 	}
 	if ($function == "stop") {
 		$remaining = stopTimerForPage($pagename, $timeout);
 		$remMS = formatMinSec($remaining);
-		print("$remaining >> $remMS");
+		print("$remMS");
 	} 
 } else {
 	$remaining = getRemainingTime($pagename,$timeout);
 	$remMS = formatMinSec($remaining);
-	print("$remaining >> $remMS");
+	print("$remMS");
 }
 ?>

@@ -2,12 +2,13 @@
 <html lang="de">
 <head>
     <meta charset="utf-8"/>
-    <title>Why Coffee is good for developers</title>
+    <title>Design Fest: Jenkins Plugins</title>
 
-    <meta name="author" content="Moritz Grauel"/>
+    <meta name="author" content="Sarah Haselbauer"/>
 
-    <link href="coffee.css" rel="stylesheet"/>
-    <link href="pretty.css" rel="stylesheet"/>
+    <link href="css/coffee.css" rel="stylesheet"/>
+    <link href="css/pretty.css" rel="stylesheet"/>
+    <link href="css/templateProject.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -20,860 +21,81 @@
         <p>For the best experience please use the latest <strong>Chrome</strong> or <strong>Safari</strong> browser.</p>
     </div>
 
-    <article class="slide title" data-x="-1000" id="title">
-        <h1>
-            Why coffee is good for developers
-        </h1>
-
-        <p>Moritz Grauel</p>
-
-        <p><a href="mailto:moritz.grauel@akquinet.de" class="inline">moritz.grauel@akquinet.de</a></p>
-    </article>
-
-    <article data-x="0" class="slide agenda">
-        <h2>Agenda</h2>
-        <ul>
-            <li>Interessantes über Kaffee</li>
-            <li>Populäre Zubereitungen</li>
-            <li>Effekte auf Menschen und Entwickler</li>
-        </ul>
-    </article>
-
-    <article data-x="0" class="slide agenda hidden">
-        <h2>Agenda</h2>
-        <ul>
-            <li class="highlighted">Interessantes über Kaffee</li>
-            <li>Populäre Zubereitungen</li>
-            <li>Effekte auf Menschen und Entwickler</li>
-        </ul>
-    </article>
-
-    <article data-x="1000" class="slide facts">
-    </article>
-
-    <article data-x="1000" class="slide facts hidden">
-        <div class="contrastBox">
-            <ul style="font-size: 0.9em;">
-                <li>Kaffee wächst auf Bäumen</li>
-                <li>Bohne ist Kern der Kaffeefrucht</li>
-                <li>botanisch gesehen keine Bohne</li>
-                <li>2 Kerne je Frucht</li>
-            </ul>
+    <article class="slide title" data-x="1000" data-y="1500" id="title">
+        
+        <p id="textbg" onclick="test();">Jenkins Plugins<br /><span id="textsubtitle"> - Design Fest -</span></p>  
+        
+        <p class="textbgsub">Sarah Haselbauer<br /><a href="mailto:sarah.haselbauer@akquinet.de" class="inline">sarah.haselbauer@akquinet.de</a></p>
+        <p class="textbgsub" id="inputToken">Token: <input type="password" value="" id="tokenInput"/>
+         <div class='source contrastBox'>
+            Bildquelle: <a
+                href="http://www.flickr.com/photos/bdesham/2432400623/sizes/l/in/photostream/">by flickr:bdesham</a>
         </div>
+        
+    </article>
+    
+    <article data-x="2000" data-y="1500" class="slide dealer">
+        <p id="textbg">Dealer</p>
+        <p id="textbgsub60">Präsentationskonzept und Blueprint für diese Präsentation:<br /><a href="https://github.com/mo-gr/wcig4d/">mo-gr a.k.a Moritz</a></p>        
+    </article>
+
+    <article data-x="1000" data-y="2500" class="slide category systemintegrations" id="systemintegrations">
+        <h2>System Integrations</h2>
+        <ul>
+            <li>CVS</li>
+            <li>URL SCM Plugin</li>
+            <li>Multiple SCMs Plugin</li>
+            <li>Jira Plugin</li>
+            <li>Jira Issue Updater Plugin</li>
+            <li>Confluence Publisher Plugin</li>
+            <li>Sonar Plugin</li>
+            <li>Jenkins Instant Messaging Plugin + Jabber Plugin</li>
+            <li>iphone View Plugin</li>
+            <li>ViewVC (for SVN,CVS)</li>
+            <li>Play! framework plugin</li>
+            <li>JBPM Plugin (experimental)</li>
+        </ul>
         <div class='source contrastBox'>
             Bildquelle: <a
-                href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/FruitColors.jpg/800px-FruitColors.jpg">Wikimedia</a>
+                href="http://www.flickr.com/photos/intvgene/370973576/sizes/l/in/photostream/">by flickr:intvgene</a>
         </div>
     </article>
-
-    <article data-x="1000" class="slide facts hidden">
-        <div class="contrastBox">
-            <ul style="font-size: 0.9em;">
-                <li>Zwei Pflanzenarten</li>
-                <li>Arabica (Hochland)<div class="comment italic">Aromatischer, feiner</div></li>
-                <li>Robusta (Tiefland)<div class="comment italic">mehr Koffein</div></li>
-            </ul>
-        </div>
-        <div class='source contrastBox'>
-            Bildquelle: <a
-                href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/FruitColors.jpg/800px-FruitColors.jpg">Wikimedia</a>
-        </div>
-    </article>
-
-    <article data-x="2000" class="slide belt">
-        <img src="images/coffee%205.png" alt="Coffeebelt" class="belt"
-             width="698" height="249"/>
-
-        <div class='source contrastBox'>
-            Bildquelle: <a href="http://theoatmeal.com/comics/coffee">The Oatmeal</a>
-        </div>
-    </article>
-
-    <article data-x="3000" class="slide centered secondMost whiteText">
-        <p>Kaffee ist weltweit am zweithäufigsten gehandelte Ware</p>
-
-        <p>(direkt nach Öl!)</p>
-    </article>
-
-    <article data-x="3000" class="busted centered hidden quick">
-        <div>BUSTED</div>
-    </article>
-
-    <article data-z="-1" data-x="3000" data-rotate-y="180" class="hidden blackText slide" style="background-color: rgba(255,255,255,0.66)">
-        <h2>Zwischen Öl und Kaffee liegen unter anderem</h2>
-        <ul style="margin-left: 20px; padding-top: 0; padding-bottom: 0;">
-            <li>Kupfer</li>
-            <li>Gold</li>
-            <li>Weizen</li>
-            <li>Baumwolle</li>
-        </ul>
-        <div class='source'>
-            Quelle: <a
-                href="http://skeptics.stackexchange.com/questions/2430/is-coffee-the-most-traded-commodity-in-the-world-after-oil">[skeptics]</a>
-        </div>
-    </article>
-
-    <article data-x="0" data-y="1000" class="slide agenda">
-        <h2>Agenda</h2>
+    
+    <article data-x="2000" data-y="2500" data-rotate-z= "40" class="slide systemintegrations withvoting">
+        <span class="timer"></span>       
+        <h2>Jira Issue Updater Plugin</h2>   
         <ul>
-            <li>Interessantes über Kaffee</li>
-            <li class="highlighted">Populäre Zubereitungen</li>
-            <li>Effekte auf Menschen und Entwickler</li>
-        </ul>
-    </article>
-
-    <article data-x="1000" data-y="1000" class="slide espresso" id="espresso">
-        <h2 class="contrastBox">Espresso</h2>
-    </article>
-
-    <article data-x="1000" data-y="1000" class="hidden centered">
-        Keine besondere Bohne
-    </article>
-
-    <article data-x="1000" data-y="1000" class="hidden centered">
-        Keine besondere Röstung
-    </article>
-
-    <article data-x="1000" data-y="1000" class="hidden centered">
-        Art der Zubereitung
-    </article>
-
-    <article data-x="1000" data-y="1000" class="slide espresso hidden" id="espressoHow">
-        <ul class="blackText">
-            <li>90ºC heißes Wasser</li>
-            <li>25 ml</li>
-            <li>9 bar Druck</li>
-            <li>7 g Kaffeemehl</li>
-            <li>25 s Durchlaufzeit</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="1000" class="slide">
-        <img src="images/coffee%207.png" width="696" height="511" style="left: 50px;"/>
-        <div class='source contrastBox'>
-            Bildquelle: <a href="http://theoatmeal.com/comics/coffee">The Oatmeal</a>
-        </div>
-    </article>
-
-    <article data-x="0" data-y="2000" class="slide agenda">
-        <h2>Agenda</h2>
-        <ul>
-            <li>Interessantes über Kaffee</li>
-            <li>Populäre Zubereitungen</li>
-            <li class="highlighted">Effekte auf Menschen und Entwickler</li>
-        </ul>
-    </article>
-
-    <article data-x="1000" data-y="2000" class="slide humans blackText centered">
-        <h1 class="contrastBox" style="margin-top: 80px;">Effekt auf Menschen</h1>
-    </article>
-    <article data-x="1000" data-y="2000" class="slide humans blackText hidden">
-        <ul>
-            <li style="margin-bottom: 20px;" class="contrastBox">Koffein<div class="comment italic">aufmunternd, belebend, konzentrationsfördernd,<br/>macht abhängig</div></li>
-            <li style="margin-bottom: 20px;" class="contrastBox">Antioxidantien<div class="comment italic">gesundheitsfördernd, krebshemmend</div></li>
-            <li class="contrastBox">Kaffee ist gesund && entspannt</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="2000" class="slide centered devs">
-        <h1 style="margin-top: 150px;">Effekt auf Entwickler</h1>
-    </article>
-
-    <article data-x="2000" data-y="2000" data-z="-1000" class="high hidden">
-        <img src="images/coffee%208.png" width="699" height="287" style="left: 50px; top: -140px"/>
-    </article>
-
-    <article data-z="10000" data-x="2000" data-y="2000" class="overview" id="overview"></article>
-    <article data-z="10000" data-x="2000" data-y="2000" class="cssucks hidden centered">
-        <div>Client-Side Scripting sucks!</div>
-    </article>
-
-    <article data-x="-1000" data-y="3000" class="centered hidden blackText">
-        Client-Side Scripting ist aus modernen Webanwendungen nicht mehr wegzudenken
-    </article>
-
-    <article data-x="-1000" data-y="3000" class="centered hidden blackText">
-        einzige Option
-    </article>
-
-    <article data-x="-1000" data-y="3000" class="centered hidden blackText">
-        JavaScript
-    </article>
-
-    <article data-x="0" data-y="3000" class="slide centered">
-        <h1 class="blackText">JavaScript</h1>
-    </article>
-
-    <article data-x="0" data-y="3000" data-z="1" class="slide hidden">
-        <img src="images/problem.png" alt="Problem?" class="problem"
-                     width="500" height="397"/>
-    </article>
-
-    <article data-x="0" data-y="3000" data-z="1" class="slide centered hidden">
-        <h1 class="blackText">JavaScript sucks</h1>
-    </article>
-
-    <article data-x="0" data-y="3000" data-z="1" class="slide centered hidden">
-        <h1 class="blackText">JavaScript sucks</h1>
-        <div>big time</div>
-    </article>
-
-    <article data-x="1000" data-y="3000" class="centered blackText">
-        Drei Gründe
-    </article>
-
-    <article data-x="2000" data-y="3000" class="slide">
-        <h2>Erstens:</h2>
-    </article>
-
-    <article data-x="2000" data-y="3000" class="slide hidden">
-        <h2>Erstens:</h2>
-        <div class="centered" style="margin-top: 100px;">DOM API</div>
-    </article>
-
-    <article data-x="2000" data-y="3000" data-z="-1000" class="slide hidden">
-        <h2>DOM API:</h2>
-        <ul>
-            <li>unterspezifiziert</li>
-            <li>Browserinkompatibilität</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="3000" data-z="-1000" class="slide hidden">
-        <h2>DOM API:</h2>
-        <ul>
-            <li>unterspezifiziert</li>
-            <li>Browserinkompatibilität</li>
-            <li>braindead</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="3000" data-z="-4000" class="hidden blackText centered">
-        Es gibt eine Lösung!
-    </article>
-
-    <article data-x="2000" data-y="3000" data-z="-1500" data-rotate-y="180" class="slide hidden">
-        <h1>
-            <a href="http://jquery.org/">
-                <img style="margin-left: 200px;" src="images/jquery.png" alt="jQuery" width="300" height="74"/>
-            </a>
-        </h1>
-    </article>
-
-    <article data-x="2000" data-y="3000" data-z="-500" data-rotate-y="180" class="slide hidden">
-        <a href="http://jquery.org/">
-            <img src="images/jquery.png" alt="jQuery" width="300" height="74" style="margin: 10px"/>
-        </a>
-        <ul style="padding-top: 100px; margin-left: 30px">
-            <li>behebt alle DOM schmerzen</li>
-            <li>extrem weit verbreitet</li>
-            <li>verwendet jQuery!</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="3000" data-z="-500" data-rotate-y="180" class="slide hidden">
-        <a href="http://jquery.org/">
-            <img src="images/jquery.png" alt="jQuery" width="300" height="74" style="margin: 10px"/>
-        </a>
-        <ul style="padding-top: 100px; margin-left: 30px">
-            <li>behebt alle DOM schmerzen</li>
-            <li>extrem weit verbreitet</li>
-            <li>verwendet jQuery!</li>
-            <li>am besten Heute noch!</li>
-        </ul>
-    </article>
-
-    <article data-x="3000" data-y="3000" class="slide">
-        <h2>Zweitens:</h2>
-    </article>
-
-    <article data-x="3000" data-y="3000" class="slide hidden">
-        <h2>Zweitens:</h2>
-        <ul>
-            <li>jeder kennt JavaScript</li>
-        </ul>
-    </article>
-
-    <article data-x="3000" data-y="3000" class="slide hidden">
-        <h2>Zweitens:</h2>
-        <ul>
-            <li>jeder kennt JavaScript</li>
-            <li>niemand lernt JavaScript</li>
-        </ul>
-    </article>
-
-    <article data-x="3000" data-y="3000" data-z="-1000" class="hidden centered" id="noLearn">
-        <img src="images/noLearn.png" width="640" height="480" style="left: 80px; top: -240px;"/>
-    </article>
-
-    <article data-x="4000" data-y="3000" class="slide">
-        <h2>Drittens:</h2>
-    </article>
-
-    <article data-x="4000" data-y="3000" class="slide hidden">
-        <h2>Drittens:</h2>
-        <div class="centered" style="margin-top: 70px;">JavaScript als Programmiersprache...</div>
-    </article>
-
-    <article data-x="4000" data-y="3000" class="slide hidden">
-        <h2>Drittens:</h2>
-        <div class="centered" style="margin-top: 70px;">JavaScript als Programmiersprache...</div>
-        <div class="centered" style="margin-top: 70px;">...stinkt.</div>
-    </article>
-
-    <article data-x="5000" data-y="3000" class="slide centered">
-        <h1 class="blackText">Ein paar Beispiele</h1>
-    </article>
-
-    <article class="slide hidden" data-x="5000" data-y="3000" data-z="1">
-        <img src="images/wtfperminute.jpg" width="500" height="453" style="position: absolute; left: 150px; top: 30px;">
-    </article>
-
-    <article class="hidden remove" data-x="6000" data-y="3000">
-        <pre id="wtfEquals_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    /* equals - how hard can it be? */
-    if (1 == '1') alert("WTF?!");
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfEquals')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-x="6000" data-y="3000" data-z="-100">
-        <pre id="wtfMath_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    /* It's math - I know math! */
-    if (Math.min() > Math.max()) {
-        alert('WTF?!');
-    }
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfMath')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-x="6000" data-y="3000" data-z="-200">
-        <pre id="wtfNumber_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    /* What is your favorite Number? */
-    alert('My favorite number is: '
-            + 9999999999999999);
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfNumber')">Run</button>
-    </article>
-    <article class="hidden remove" data-x="6000" data-y="3000" data-z="-300">
-        <pre id="wtfTransitive_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    /* Is this even possible? */
-    if (5 < 4 < 1) alert ('WTF?!')
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfTransitive')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-x="6000" data-y="3000" data-z="-400">
-        <pre id="wtfBatman_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    /* My favorite */
-    var wat = Array(16).join("wtf" - 1)
-        + " Batman!";
-    alert(wat);
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfBatman')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-x="6000" data-y="3000" data-z="-500">
-        <pre id="wtfBrackets_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    /* Well... uhm...*/
-    if ('10' == ++[[]][+[]]+[+[]]) {
-        alert('WTF?!')
-    }
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfBrackets')">Run</button>
-    </article>
-
-    <div class="hidden remove" data-x="6000" data-y="3000" data-z="-500" style="display: none">
-        <pre id="wtfScope_src" contenteditable="true" class="prettyprint lang-javascript">
-&lt;script type="text/javascript">
-    function hello(nameParam) {
-        greeting = 'Hello ' + nameParam;
-        return greeting;
-    }
-    alert('1st: ' + hello('World'));
-    alert('2nd: ' + greeting);
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoding(event, 'wtfScope')">Run</button>
-    </div>
-
-    <article class="hidden centered" data-x="6000" data-y="3000" data-z="-1000">
-        Genug?
-    </article>
-
-    <article data-x="7000" data-y="3000" class="slide hidden centered">
-            <div style="margin-top: 30px;">JavaScript ist voll spannender Überraschungen.</div>
-            <div style="margin-top: 30px;">Mehr davon: <a href="http://wtfjs.com/">wtfjs.com</a></div>
-    </article>
-
-    <article class="slide centered" data-x="-1000" data-y="4000" data-z="-1">
-        <h2>Gibt es wirklich keine Alternativen?</h2>
-    </article>
-
-    <article class="slide hidden centered" data-x="-1000" data-y="4000">
-        <h2>Gibt es wirklich keine Alternativen?</h2>
-        <img src="images/alternatives.png" width="437" height="104" alt="Alternativen" style="left: 155px; margin-top: 40px;">
-    </article>
-
-    <article class="slide hidden centered" data-x="-1000" data-y="4000">
-        <h2>Gibt es wirklich keine Alternativen?</h2>
-        <img src="images/alternatives.png" width="437" height="104" alt="Alternativen" style="left: 155px; margin-top: 40px;">
-        <div style="margin-top: 180px;">Nein.</div>
-    </article>
-
-    <article class="slide hidden centered" data-x="-1000" data-y="4000">
-        <h2>Gibt es wirklich keine Alternativen?</h2>
-        <img src="images/alternatives.png" width="437" height="104" alt="Alternativen" style="left: 155px; margin-top: 40px;">
-        <div style="margin-top: 180px;">Nein.</div>
-        <div style="margin-top: 40px;">Ende.</div>
-    </article>
-
-    <article class="hidden centered blackText" data-x="-1000" data-y="4000" data-z="-1000">
-        Moment mal...
-    </article>
-
-    <article class="hidden centered blackText" data-x="-1000" data-y="4000" data-z="-1000">
-        Ganz Gallien?
-    </article>
-
-    <article data-x="0" data-y="4000" class="slide hello-coffeescript-slide" id="hello-coffeescript-slide">
-        <a class="coffee" href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a>
-    </article>
-
-    <article data-x="0" data-y="4000" class="slide hidden hello-coffeescript-slide" id="hello-coffeescript-slide2">
-        <a class="coffee" style="margin-top: 80px" href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a>
-        <div class="centered" style="font-size: 40px;">
-            <p>Version 1.2.0</p>
-            <p>Version 0.1.0 am 24.12.2009</p>
-            <a href="https://twitter.com/#!/jashkenas" class="inline">Jeremy Ashkenas</a>
-            <p>MIT Lizenz</p>
-        </div>
-    </article>
-
-    <article data-x="1000" data-y="4000" class="slide">
-        <h2>Was ist CoffeeScript?</h2>
-        <ul>
-            <li>JavaScript without the fail™</li>
-            <li>saubere(re) Syntax</li>
-            <li>schlanker</li>
-        </ul>
-    </article>
-
-    <article data-x="1000" data-y="4000" class="slide hidden">
-        <h2>Was ist CoffeeScript?</h2>
-        <ul>
-            <li>JavaScript without the fail™</li>
-            <li>saubere(re) Syntax</li>
-            <li>schlanker</li>
-            <li>compiliert zu lesbarem JavaScript</li>
-        </ul>
-    </article>
-
-    <article class="hidden centered blackText" data-x="1000" data-y="4000" data-z="-1000">
-        Moment mal...
-    </article>
-
-    <article class="hidden centered blackText" data-x="1000" data-y="4000" data-z="-1000">
-        Du hast uns doch gerade erklärt, JavaScript sei das Problem?!
-    </article>
-
-    <article data-x="2000" data-y="4000" class="slide">
-        <h2>JavaScript hat gute Seiten</h2>
-        <img src="images/javascript-the-good-parts-the-definitive-guide.jpg" width="600" height="450" style="left: 100px; top: 100px;">
-
-        <div class='source'>
-            Bildquelle: <a href="http://img.anongallery.org/img/2/0/javascript-the-good-parts-the-definitive-guide.jpg">Anongallery</a>
-        </div>
-    </article>
-
-    <article data-x="2000" data-y="4000" class="hidden centered">
-        <div class="contrastBox">CoffeeScript hält sich an die guten Teile</div>
-    </article>
-    <article data-x="2000" data-y="4000" class="hidden centered">
-        <div class="contrastBox">CoffeeScript generiert lesbares, schön formatiertes JavaScript</div>
-    </article>
-    <article data-x="2000" data-y="4000" class="hidden centered">
-        <div class="contrastBox">generiertes JavaScript ist <a href="http://www.jslint.com/" class="inline">JSLint</a> konform</div>
-    </article>
-    <article data-x="2000" data-y="4000" class="hidden centered">
-        <div class="contrastBox">deutlich weniger WTFs</div>
-    </article>
-    <article data-x="2000" data-y="4000" class="hidden centered">
-        <div class="contrastBox">Integration von JavaScript Bibliotheken schmerzfrei</div>
-    </article>
-
-    <article data-x="3000" data-y="4000" class="slide">
-        <ul style="font-size: 40px; padding: 0; margin-left: 40px;">
-            <li>CoffeeScript hält sich an die guten Teile
-            <li>CoffeeScript generiert lesbares, schön formatiertes JavaScript
-            <li>generiertes JavaScript ist <a href="http://www.jslint.com/" class="inline">JSLint</a> konform
-            <li>deutlich weniger WTFs
-            <li>Integration von JavaScript Bibliotheken schmerzfrei
-        </ul>
-    </article>
-
-    <article class="hidden" data-x="4000" data-y="4000">
-        <pre id="coffeeEquals_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller">
-// Generated Javascript:
-        </pre>
-        <div class="line"></div>
-        <pre id="coffeeEquals_src" contenteditable="true" class="prettyprint lang-javascript smaller">
-&lt;script type="text/coffeescript">
-    if (1 == '1')
-        alert("WTF?!")
-    else
-        alert("Unicorns!")
-&lt;/script></pre>
-        <button onclick="return refreshLiveCoffee(event, 'coffeeEquals')">Compile</button>
-        <button onclick="return executeLiveCoffee(event, 'coffeeEquals')">Run</button>
-    </article>
-
-    <article class="hidden centered blackText" data-x="5000" data-y="4000">
-        Eine Kleinigkeit...
-    </article>
-
-    <article class="hidden centered blackText" data-x="5000" data-y="4000">
-       <img src="images/sigWhitespace.png" width="552" height="414" style="left: 126px; top: -180px;"/>
-    </article>
-
-    <article class="hidden nesting" data-x="5000" data-y="4000">
-        <pre id="nesting0_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-$(document).ready(function() {
-  $(".hideable").each(function(index, item) {
-    $(item).on("click", function(event) {
-      $(event.target).slideUp(1000, function() {
-        console.log('animation complete');
-      });
-    });
-  });
-});</pre>
-    </article>
-    <article class="hidden nesting" data-x="5000" data-y="4000">
-        <pre id="nesting1_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-$(document).ready(function() {
-  $(".hideable").each(function(index, item) {
-    $(item).on("click", function(event) {
-      $(event.target).slideUp(1000, function() {
-        console.log('animation complete')
-      })
-    })
-  })
-})</pre>
-    </article>
-    <article class="hidden nesting" data-x="5000" data-y="4000">
-        <pre id="nesting2_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-$(document).ready function() {
-  $(".hideable").each function(index, item) {
-    $(item).on "click", function(event) {
-      $(event.target).slideUp 1000, function() {
-        console.log('animation complete')
-      }
-    }
-  }
-}</pre>
-    </article>
-    <article class="hidden nesting" data-x="5000" data-y="4000">
-        <pre id="nesting3_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-$(document).ready function()
-  $(".hideable").each function(index, item)
-    $(item).on "click", function(event)
-      $(event.target).slideUp 1000, function()
-        console.log('animation complete')
-</pre>
-    </article>
-    <article class="hidden nesting" data-x="5000" data-y="4000">
-        <pre id="nesting4_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-$(document).ready () ->
-  $(".hideable").each (index, item) ->
-    $(item).on "click", (event) ->
-      $(event.target).slideUp 1000, () ->
-        console.log('animation complete')
-</pre>
-    </article>
-    <article class="hidden nesting" data-x="6000" data-y="4000">
-        <pre id="nesting5_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-# CoffeeScript version
-$(document).ready () ->
-  $(".hideable").each (index, item) ->
-    $(item).on "click", (event) ->
-      $(event.target).slideUp 1000, () ->
-        console.log('animation complete')
-</pre>
-    </article>
-    <article class="hidden nesting" data-x="6000" data-y="4000">
-        <pre id="nesting6_src" contenteditable="false" class="prettyprint lang-javascript smaller">
-// CoffeeScript compiler output
-$(document).ready(function() {
-  return $(".hideable").each(function(index, item) {
-    return $(item).on("click", function(event) {
-      return $(event.target).slideUp(1000, function() {
-        return console.log('animation complete');
-      });
-    });
-  });
-});</pre>
-    </article>
-
-    <article class="slide features" data-x="-1000" data-y="5000">
-        <h2 class="contrastBox">Mehr Zucker im Kaffee?</h2>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="c1">
-        <pre id="stringInter_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-    ###
-    Block Comments and auto-var
-    ###
-    drink = "coffee"
-    alert coffee</pre>
-        <div class="line"></div>
-        <pre id="stringInter_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'stringInter')">Compile</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="correctScope">
-        <pre id="scope_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-    # default arguments and string interpolation
-    fill = (container, liquid = "coffee") ->
-      "Filling #{liquid} in the #{container}"
-    alert fill 'bucket'</pre>
-        <div class="line"></div>
-        <pre id="scope_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'scope')">Compile</button>
-        <button onclick="return executeLiveCoffee(event, 'scope')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="existential">
-        <pre id="existential_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-    # existential operator and aliases
-    # like: not/! , and/&&, is/=== etc
-    if not coffee? then alert "panic"</pre>
-        <div class="line"></div>
-        <pre id="existential_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'existential')">Compile</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="json">
-        <pre id="json_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-    # JSON in coffee
-    json = bedcon:
-      year: 2012
-      presenter:
-        name: "Moritz"</pre>
-        <div class="line"></div>
-        <pre id="json_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'json')">Compile</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="repeatArray">
-        <pre id="repeatArray_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-    # loops return an array
-    count = 0
-    addicted = until count > 5
-        count++
-        "Drinking Coffee #{count}"
-    alert addicted</pre>
-        <div class="line"></div>
-        <pre id="repeatArray_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'repeatArray')">Compile</button>
-        <button onclick="return executeLiveCoffee(event, 'repeatArray')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="listComprehension1">
-        <pre id="listComprehension1_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-    # iterating over lists and maps
-    for x in [1..10]
-        console.log x
-    myLikes = { 'Espresso': true, 'Tea': false }
-    for key, value of myLikes
-        alert("I like #{key}") if value</pre>
-        <div class="line"></div>
-        <pre id="listComprehension1_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'listComprehension1')">Compile</button>
-        <button onclick="return executeLiveCoffee(event, 'listComprehension1')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="listComprehension2">
-        <pre id="listComprehension2_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-# comprehensions
-list = [1 .. 10]
-evenDoubled =
-      (i * 2 for i in list when (i % 2 == 0))
-alert evenDoubled</pre>
-        <div class="line"></div>
-        <pre id="listComprehension2_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'listComprehension2')">Compile</button>
-        <button onclick="return executeLiveCoffee(event, 'listComprehension2')">Run</button>
-    </article>
-
-    <article class="hidden remove" data-y="5000" id="assign">
-        <pre id="assign_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-# Destructuring Assignment
-fooBar = (baz) -> ["Foo#{baz}", "Bar#{baz}"]
-
-[foo, bar] = fooBar(42)</pre>
-        <div class="line"></div>
-        <pre id="assign_embed" contenteditable="false" class="prettyprint lang-javascript generated smaller"></pre>
-        <button onclick="return refreshLiveCoffee(event, 'assign')">Compile</button>
-    </article>
-
-    <article class="hidden blackText centered remove" data-x="1000" data-y="5000">
-        Objekt Orientierung in JavaScript?
-        </article>
-
-    <article class="hidden blackText centered remove" data-x="1000" data-y="5000">
-        <img src="images/proto.png" width="640" height="480" style="left: 80px; top: -200px;"/>
-    </article>
-
-    <article class="hidden remove" data-x="1000" data-y="5000" id="object1">
-        <pre id="object1_src" contenteditable="true" class="prettyprint lang-coffee smaller">
-class Person
-  constructor: (@name)
-  hi: ->
-    alert "Hi #{@name}"
-
-class Developer extends Person
-  constructor: (@name, @favoriteBrewStyle) ->
-    super name
-  brew: ->
-    alert "Brewing #{@favoriteBrewStyle}"
-
-mo = new Developer "Moritz", "Espresso"</pre>
-        <button onclick="refreshLiveCoffee(event, 'object1'); document.selectNextSlide(); return false;">Compile</button>
-    </article>
-
-    <article class="hidden" data-x="1000" data-y="5000" id="object1Out">
-        <pre id="object1_embed" contenteditable="true" class="prettyprint lang-javascript tiny"></pre>
-    </article>
-
-    <article data-x="2000" data-y="5000" class="slide where">
-        <h2 class="whiteText">Ok, ein Kaffee bitte...</h2>
-    </article>
-
-    <article data-x="2000" data-y="5000" class="slide where hidden">
-        <h2 class="whiteText">Ok, ein Kaffee bitte...</h2>
-        <ul class="whiteText">
-            <li>Serverseitige compilation</li>
-            <li>Clientseitige compilation (nicht Empfohlen)</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="5000" class="slide where hidden">
-        <h2 class="whiteText">Ok, ein Kaffee bitte...</h2>
-        <ul class="whiteText">
-            <li>Serverseitige compilation</li>
-            <li>Clientseitige compilation (nicht Empfohlen)</li>
-            <li>Play 2.0</li>
-        </ul>
-    </article>
-
-    <article data-x="2000" data-y="5000" class="slide where hidden">
-        <h2 class="whiteText">Ok, ein Kaffee bitte...</h2>
-        <ul class="whiteText">
-            <li>Serverseitige compilation</li>
-            <li>Clientseitige compilation (nicht Empfohlen)</li>
-            <li>Play 2.0</li>
-            <li>Maven Plugins verfügbar</li>
-        </ul>
-    </article>
-
-    <article data-x="3000" data-y="5000" class="slide">
-        <h2>Maven Optionen</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/iron9light/coffeescript-maven-plugin" class="inline">coffeescript-maven-plugin</a>
-                <div class="comment">benötigt JDK 7</div>
-            </li>
-            <li>
-                <a href="https://github.com/jakewins/brew" class="inline">brew</a>
-                <div class="comment">nicht mehr aktuell</div>
-            </li>
-            <li>
-                <a href="https://github.com/talios/coffee-maven-plugin" class="inline">coffee-maven-plugin</a>
-                <div class="comment">keinen watch-mode</div>
-            </li>
-        </ul>
-    </article>
-
-    <article data-x="3000" data-y="6000" class="hidden">
-        <pre id="mvn_src" contenteditable="false" class="prettyprint lang-xml smallest">
-&lt;plugin>
-  &lt;groupId>com.theoryinpractise&lt;/groupId>
-  &lt;artifactId>coffee-maven-plugin&lt;/artifactId>
-  &lt;version>1.4.1&lt;/version>
-  &lt;configuration>
-    &lt;coffeeDir>${basedir}/src/main/webapp/resources/scripts&lt;/coffeeDir>
-    &lt;coffeeOutputDirectory>
-      ${project.build.directory}/${artifactId}-${version}/resources/scripts
-    &lt;/coffeeOutputDirectory>
-    &lt;bare>true&lt;/bare>
-    &lt;compileIndividualFiles>true&lt;/compileIndividualFiles>
-  &lt;/configuration>
-  &lt;executions>
-    &lt;execution>
-      &lt;id>coffee&lt;/id>
-      &lt;goals>
-        &lt;goal>coffee&lt;/goal>
-      &lt;/goals>
-    &lt;/execution>
-  &lt;/executions>
-&lt;/plugin></pre>
-    </article>
-
-    <article data-x="4000" data-y="5000" class="slide">
-        <h2 class="centered">Ein paar Warnungen</h2>
-        <img src="images/warn.jpg" width="300" height="271" alt="Warning" style="left:250px; top:120px;"/>
-    </article>
-
-    <article data-x="4000" data-y="5000" data-z="-1" data-rotate-y="180" class="hidden blackText slide" style="background-color: rgba(255,255,255,0.66)">
-        <ul>
-            <li>Nicht WTF frei
-                <div class="comment italic">keine eigene Laufzeit</div>
-            </li>
-            <li>Syntax-Zucker-Schock
-                <div class="comment italic">Komplexe Einzeiler sind verlockend aber böse</div>
-            </li>
-            <li>Indirektes Debugging
-                <div class="comment italic">Debugger sieht JavaScript</div>
-            </li>
-        </ul>
-    </article>
-
-    <article class="slide" data-x="5000" data-y="5000">
-        <h2>CoffeeScript...</h2>
-        <ul>
-            <li>ist leicht zu lernen.</li>
-            <li>ist weniger Fehlerträchtig.</li>
-            <li>macht mehr Spaß als JavaScript.</li>
-            <li>nagelt niemanden fest.</li>
-        </ul>
-    </article>
-
-
-    <article data-scale="11" data-x="2000" data-y="2500" class="remove overview hidden centered blackText" id="fragen">
+        	<li>erlaubt je Job durch unterschiedlichen Jira-User eine Transition auszuführen</li>
+        	<li>Transitionausführungen können automatisch kommentiert werden</li>
+        	<li>benötigt Jira-Filter</li>
+        	<li>(-) relative viel Konfigurationsaufwand</li>
+        	<li>(-) mitunter gefährlich, wenn Filter fehlerhaft</li>
+        </ul>     
+    </article>
+    
+    <article data-x="2000" data-y="3500" class="slide title beforeResults">
+        <h2>Ergebnisse</h2>
+        <form>
+        <input type="button" value="Generieren" onclick="MakeReportRequest();" />
+        </form>
+    </article>
+
+    <article data-scale="3.5" data-x="-500" data-y="2500" class="remove overview hidden blackText resultReference" id="fragen">
         <div style="font-size: 60px;">Fragen?</div>
     </article>
-
-    <article data-scale="11" data-x="2000" data-y="2500" class="remove overview hidden centered blackText" id="thanks">
-        <div style="font-size: 60px;">Vielen Dank</div>
-        <a href="https://plus.google.com/106410106555697258570" style="font-size: 40px;" class="blackText">+Moritz Grauel</a><br/>
-        <a href="https://twitter.com/#!/mo_gr" style="font-size: 40px;" class="blackText">@mo_gr</a><br/>
-        <a href="mailto:moritz.grauel@akquinet.de" style="font-size: 40px;" class="blackText">moritz.grauel@akquinet.de</a>
-        <!--<a href="http://blog.notadomain.com" style="font-size: 40px;" class="blackText">notadomain.com</a>-->
+ 	<article data-scale="3.5" data-x="2000" data-y="2500" class="remove overview hidden blackText" id="smile">
+        <div style="font-size: 1px;"></div>
     </article>
-
-    <article data-scale="11" data-x="2000" data-y="2500" class="overview hidden centered blackText" id="end"></article>
-
 </div>
 
-<script src="impress.js"></script>
-<script src="prettify.js"></script>
-<script src="coffee-script.js"></script>
-<script src="liveCode.js"></script>
+<script src="js/impress.js"></script>
+<script src="js/prettify.js"></script>
+<script src="js/coffee-script.js"></script>
+<script src="js/liveCode.js"></script>
+<script src="js/serverCommunication/ajax.js"></script>
+<script src="js/serverCommunication/timer.js"></script>
+<script src="js/serverCommunication/vote.js"></script>
+<script src="js/serverCommunication/votereport.js"></script>
 <script type="text/javascript">
     prettyPrint();
     var pres = document.getElementsByTagName('PRE');
