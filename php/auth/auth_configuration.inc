@@ -5,7 +5,7 @@
  * This php script only works with PHP 5.3 or higher due to usage of the new way of accessing static variables of classes. 
  */
 class AuthConfiguration {
-	static $configRoot = "/opt/presentationSpace";
+	static $configRoot = "/opt/templateProject";
 	static $authFileDir = "/login-data";
 	static $authFile = "auth.conf";		
 	static $pwNotSet = "notyetset";

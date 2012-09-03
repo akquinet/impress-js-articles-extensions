@@ -1,6 +1,6 @@
 <?php
 	//load the configuration
-	set_include_path('/var/www/pr/jdf/php');
+	set_include_path('/var/www/templateProject/php');
 	require_once('vote/vote_configuration.inc');
 	require('auth/auth.php');
 

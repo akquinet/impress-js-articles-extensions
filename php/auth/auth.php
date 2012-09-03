@@ -4,7 +4,7 @@
  */
 
 	//load the configuration
-	set_include_path('/var/www/pr/jdf/php');
+	set_include_path('/var/www/templateProject/php');
 	require_once('auth/auth_configuration.inc');
 
     function authenticate($id,$pw) {    	
