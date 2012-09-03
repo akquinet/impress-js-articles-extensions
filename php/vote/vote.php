@@ -1,4 +1,8 @@
 <?php
+/*
+ * This php script only works with PHP 5.3 or higher due to usage of the new way of accessing static variables of classes.
+ */
+
 	//load the configuration
 	set_include_path('/var/www/templateProject/php');
 	require_once('vote/vote_configuration.inc');
