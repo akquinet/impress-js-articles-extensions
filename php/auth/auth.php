@@ -48,7 +48,7 @@
 	    		}
 	    		$j = $j + 1;
 	    	}
-	    	$file = fopen($authFile,"w");
+	    	$file = fopen(AuthConfiguration::$authFile,"w");
 			fputs($file, $fileContent);
 			fclose($file);
 			return true;

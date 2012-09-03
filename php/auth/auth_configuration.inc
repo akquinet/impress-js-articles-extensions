@@ -28,7 +28,7 @@ class AuthConfiguration {
 $conf = new AuthConfiguration;
 //reset values for static paths according to the configRoot using a function call
 $conf->addConfigRootToAuthFileDirPath();
-$conf->ensurePresenceOf AuthFileDir();
+$conf->ensurePresenceOfAuthFileDir();
 $conf->addConfigRootToAuthFilePath();
 
 ?>

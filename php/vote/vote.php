@@ -64,7 +64,7 @@
 		   				$prefix=$sep;
 		   			}
 		   			if (trim($voted) != trim($article)) {
-		   				$cleanedVoteContent = $cleanedVoteContent.$prefix.$voted;
+		   				$cleanedVoteContent = "trimmed-art-".trim($article)."trimmed-voted-".trim($voted).$cleanedVoteContent.$prefix.$voted;
 		   			}
 		   		}
 		   		$vfile = fopen($voteFile,"w");

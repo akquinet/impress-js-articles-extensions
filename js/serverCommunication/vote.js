@@ -1,3 +1,6 @@
+//available voting options
+var SELECTABLE_VOTING_OPTIONS = ['must have','nice to have', 'unsure', 'VETO'];
+
 //some css settings
 var css_votingIndicatorClass = "withvoting";
 
@@ -46,34 +49,48 @@ function addVoteSections() {
 
 			var formVote = document.createElement("form");
 			formVote.setAttribute("id", prefixForm + i);
+			
+			for ( var k = 0; k < SELECTABLE_VOTING_OPTIONS.length; k++) {
+				
+				var option = document.createElement("input");
+				option.setAttribute("type", "radio");
+				option.setAttribute("name", prefixOption + i);
+				option.setAttribute("value", SELECTABLE_VOTING_OPTIONS[k].replace(" ", "-"));
+				option.setAttribute("class", "radiovoting");
+				formVote.appendChild(option);
+				var optionText = document.createTextNode(SELECTABLE_VOTING_OPTIONS[k]+" ");
+				formVote.appendChild(optionText);
+			}
+//			var optionMH = document.createElement("input");
+//			optionMH.setAttribute("type", "radio");
+//			optionMH.setAttribute("name", prefixOption + i);
+//			optionMH.setAttribute("value", "must-have");
+//			optionMH.setAttribute("class", "radiovoting");
+//			formVote.appendChild(optionMH);
+//			var mhText = document.createTextNode("must have ");
+//			formVote.appendChild(mhText);
+//
+//			var optionNH = document.createElement("input");
+//			optionNH.setAttribute("type", "radio");
+//			optionNH.setAttribute("name", prefixOption + i);
+//			optionNH.setAttribute("value", "nice-to-have");
+//			optionNH.setAttribute("class", "radiovoting");
+//			formVote.appendChild(optionNH);
+//			var nhText = document.createTextNode("nice to have ");
+//			formVote.appendChild(nhText);
+//
+//			var optionU = document.createElement("input");
+//			optionU.setAttribute("type", "radio");
+//			optionU.setAttribute("name", prefixOption + i);
+//			optionU.setAttribute("value", "unsure");
+//			optionU.setAttribute("class", "radiovoting");
+//			formVote.appendChild(optionU);
+//			var uText = document.createTextNode("unsure | id: ");
+//			formVote.appendChild(uText);
 
-			var optionMH = document.createElement("input");
-			optionMH.setAttribute("type", "radio");
-			optionMH.setAttribute("name", prefixOption + i);
-			optionMH.setAttribute("value", "must-have");
-			optionMH.setAttribute("class", "radiovoting");
-			formVote.appendChild(optionMH);
-			var mhText = document.createTextNode("must have ");
-			formVote.appendChild(mhText);
-
-			var optionNH = document.createElement("input");
-			optionNH.setAttribute("type", "radio");
-			optionNH.setAttribute("name", prefixOption + i);
-			optionNH.setAttribute("value", "nice-to-have");
-			optionNH.setAttribute("class", "radiovoting");
-			formVote.appendChild(optionNH);
-			var nhText = document.createTextNode("nice to have ");
-			formVote.appendChild(nhText);
-
-			var optionU = document.createElement("input");
-			optionU.setAttribute("type", "radio");
-			optionU.setAttribute("name", prefixOption + i);
-			optionU.setAttribute("value", "unsure");
-			optionU.setAttribute("class", "radiovoting");
-			formVote.appendChild(optionU);
-			var uText = document.createTextNode("unsure | id: ");
+			var uText = document.createTextNode("| id: ");
 			formVote.appendChild(uText);
-
+			
 			var inputID = document.createElement("input");
 			inputID.setAttribute("type", "text");
 			inputID.setAttribute("value", "username");

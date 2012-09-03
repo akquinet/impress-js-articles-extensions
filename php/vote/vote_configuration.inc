@@ -27,7 +27,7 @@ class VoteConfiguration {
 	static $voteOptionMustHave = 'must-have';
 	static $voteOptionNiceToHave = 'nice-to-have';
 	static $voteOptionUnsure = 'unsure';
-	static $voteOptionVeto = 'veto';
+	static $voteOptionVeto = 'VETO';
 	//default option indicates, if a form with no vote option selected has been submitted
 	static $voteOptionDefault = 'none';
 	static $voteOptions = null;
