@@ -33,6 +33,13 @@ Every article, which shall be time limited, needs to contain the following:
 [...]
 </article>
 
+The default timeout for a time limited article can be manipulated in the first lines of js/timer.js (standard values is 60 sec).
+To define article specific timeouts just add a timeout attribute to the article tag:
+<article class="slide" timeout="30"> 
+<span class="timer"></span>
+[...]
+</article>
+
 ### using the voting extension ###
 Do step 3 for php/vote/vote.php
 Do step 3 for php/auth/auth.php

@@ -1,7 +1,13 @@
 var articlesForTimer = document.getElementsByTagName("article");
+var DEFAULT_TIMEOUT = 60;
 var timeouts = new Array();
 for ( var i = 0; i < articlesForTimer.length; i++) {
-	timeouts[i] = 60;
+	var timeout = DEFAULT_TIMEOUT;
+	var attr = articlesForTimer[i].getAttribute("timeout");
+	if (attr != null && attr != '') {
+		timeout = parseInt(attr);
+	}
+	timeouts[i] = timeout;
 }
 
 function handleTimers() {
