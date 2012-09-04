@@ -12,9 +12,9 @@ var css_bg_colorUpdated = 'colorUpdated';
 var votingSectionIntoTagName = 'article';
 
 //where to send the request and what return values indicate success or updated state
-var backendTarget = 'php/vote/vote.php';
-var backendResultSuccess = 'success';
-var backendResultUpdated = 'updated';
+var voteBackendTarget = 'php/vote/vote.php';
+var voteBackendResultSuccess = 'success';
+var voteBackendResultUpdated = 'updated';
 
 // how to name the items in the voting forms
 var prefixDiv = 'div-voting-article-';
@@ -168,7 +168,7 @@ function MakeVoteRequest(params, formVoteSuffix) {
 			HandleVoteResponse(xmlHttp.responseText, formVoteSuffix);
 		}
 	}
-	xmlHttp.open("POST", backendTarget, true);
+	xmlHttp.open("POST", voteBackendTarget, true);
 	xmlHttp.setRequestHeader("Content-type",
 			"application/x-www-form-urlencoded");
 	xmlHttp.send(params);
@@ -180,7 +180,7 @@ function HandleVoteResponse(result, formVoteSuffix) {
 	var formVote = document.getElementById(prefixForm + formVoteSuffix);
 	var currentID = formVote.username.value;
 	var currentPW = formVote.password.value;
-	if (result == backendResultSuccess) {
+	if (result == voteBackendResultSuccess) {
 		var idFields = document.getElementsByName("username");
 		for ( var i = 0; i < idFields.length; i++) {
 			idFields[i].value = currentID;
@@ -192,10 +192,10 @@ function HandleVoteResponse(result, formVoteSuffix) {
 	}
 
 	var colorClass = css_bg_colorFailed;
-	if (result == backendResultSuccess) {
+	if (result == voteBackendResultSuccess) {
 		colorClass = css_bg_colorSuccess;
 	}
-	if (result == backendResultUpdated) {
+	if (result == voteBackendResultUpdated) {
 		colorClass = css_bg_colorUpdated;
 	}
 
