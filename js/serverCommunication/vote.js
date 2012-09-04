@@ -55,7 +55,7 @@ function addVoteSections() {
 				var option = document.createElement("input");
 				option.setAttribute("type", "radio");
 				option.setAttribute("name", prefixOption + i);
-				option.setAttribute("value", SELECTABLE_VOTING_OPTIONS[k].replace(" ", "-"));
+				option.setAttribute("value", SELECTABLE_VOTING_OPTIONS[k].replace(/\ /g, "-"));
 				option.setAttribute("class", "radiovoting");
 				formVote.appendChild(option);
 				var optionText = document.createTextNode(SELECTABLE_VOTING_OPTIONS[k]+" ");
