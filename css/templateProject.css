@@ -120,12 +120,12 @@ article.category li {
 	background: rgba(200,255,200,0.66);
 }
 
-#result-must-have h4,#result-nice-to-have h4,#result-unsure h4 {
+.resultScrollDiv h4 {
 	font-size: 16pt;
 	font-style: bold;
 }
 
-#result-must-have,#result-nice-to-have,#result-unsure {
+.resultScrollDiv {
     background: #fff;
     color:#000;
     box-shadow: 0 8px 34px rgba(230, 230, 230, .9);

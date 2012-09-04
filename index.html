@@ -81,7 +81,12 @@
         </ul>     
     </article>
     
-   
+    <article data-x="2000" data-y="3500" class="slide title beforeResults">
+        <h2>Ergebnisse</h2>
+        <form>
+        <input type="button" value="Generieren" onclick="MakeReportRequest();" />
+        </form>
+    </article>
 
     <article data-scale="3.5" data-x="-500" data-y="2500" class="remove overview hidden blackText resultReference" id="fragen">
         <div style="font-size: 60px;">Fragen?</div>
@@ -98,6 +103,7 @@
 <script src="js/serverCommunication/ajax.js"></script>
 <script src="js/serverCommunication/timer.js"></script>
 <script src="js/serverCommunication/vote.js"></script>
+<script src="js/serverCommunication/votereport.js"></script>
 <script type="text/javascript">
     prettyPrint();
     var pres = document.getElementsByTagName('PRE');
