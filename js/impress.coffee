@@ -89,7 +89,11 @@ toArray(impress.childNodes).forEach(
 impress.appendChild canvas
 
 #steps = $$(".step", impress)
-steps = $$("article", impress)
+steps = {}
+fetchArticles = () ->
+	steps = $$("article", impress)
+
+fetchArticles()
 
 ###
 Setup the document
@@ -125,33 +129,35 @@ current = {
 ###
 position the slides on the canvas
 ###
+positionSlides = () ->
+	for step, idx in steps
+	  data = step.dataset
+	  stepData = {
+	    translate: {
+	      x: data.x || 0,
+	      y: data.y || 0,
+	      z: data.z || 0
+	    },
+	    rotate: {
+	      x: data.rotateX || 0,
+	      y: data.rotateY || 0,
+	      z: data.rotateZ || data.rotate || 0
+	    },
+	    scale: data.scale || 1
+	  }
+	  step.stepData = stepData;
+	  step.id = "step-" + idx unless step.id
+	
+	  css step, {
+	    position: "absolute",
+	    transform: "translate(-50%,-50%)" +
+	      translate(stepData.translate) +
+	      rotate(stepData.rotate) +
+	      scale(stepData.scale),
+	    transformStyle: "preserve-3d"
+	  }
 
-for step, idx in steps
-  data = step.dataset
-  stepData = {
-    translate: {
-      x: data.x || 0,
-      y: data.y || 0,
-      z: data.z || 0
-    },
-    rotate: {
-      x: data.rotateX || 0,
-      y: data.rotateY || 0,
-      z: data.rotateZ || data.rotate || 0
-    },
-    scale: data.scale || 1
-  }
-  step.stepData = stepData;
-  step.id = "step-" + idx unless step.id
-
-  css step, {
-    position: "absolute",
-    transform: "translate(-50%,-50%)" +
-      translate(stepData.translate) +
-      rotate(stepData.rotate) +
-      scale(stepData.scale),
-    transformStyle: "preserve-3d"
-  }
+positionSlides()
 
 ###
 make a given step active
@@ -253,6 +259,9 @@ window.addEventListener("hashchange", () ->
 
 document.selectNextSlide = selectNext
 document.selectPrevSlide = selectPrev
+
+document.positionSlides = positionSlides
+document.fetchArticles = fetchArticles
 
 ###
 start impress
