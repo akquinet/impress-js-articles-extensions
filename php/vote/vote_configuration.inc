@@ -32,7 +32,8 @@ class VoteConfiguration {
 	static $voteOptionDefault = 'none';
 	static $voteOptions = null;
 	
-	function addAllVoteOptionsToArray() {		
+	function addAllVoteOptionsToArray() {	
+		//please make sure that voteOptionDefault is always the last item in your array, otherwise you may have to adjust the javascript function HandleReportResponse in votereport.js
 		$this::$voteOptions = array($this::$voteOptionMustHave,$this::$voteOptionNiceToHave,$this::$voteOptionUnsure,$this::$voteOptionVeto,$this::$voteOptionDefault);
 	}
 	
