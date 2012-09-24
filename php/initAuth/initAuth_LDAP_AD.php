@@ -5,25 +5,58 @@
 	//load the configuration
 	set_include_path('/var/www/templateProject/php');
 	require_once('auth/auth_configuration.inc');
+	require_once('initAuth/initAuth_configuration.inc');
 
 	function initAuthFile() {
-    	if (file_exists(AuthConfiguration::$authFile)) {
+    	if (!file_exists(InitAuthConfiguration::$ldapConfFile)) {
+    		echo "EXCEPTION: missing ".InitAuthConfiguration::$ldapConfFile;
     		return;
         }
-       
-        $ldappwFile = AuthConfiguration::$configRoot."/ldap-data/ldap-pw.conf";
-	    $ldapuserFile = AuthConfiguration::$configRoot."/ldap-data/ldap-user.conf";
-	    $ldapurlFile = AuthConfiguration::$configRoot."/ldap-data/ldap-url.conf";
-	    $ldapbasednFile = AuthConfiguration::$configRoot."/ldap-data/ldap-basedn.conf";
-	    $ldapfilterFile = AuthConfiguration::$configRoot."/ldap-data/ldap-filter.conf";
+		if (file_exists(AuthConfiguration::$authFile)) {
+    		echo "EXCEPTION: auth conf already created: ".AuthConfiguration::$authFile;
+    		return;
+        }
+        
+        //$ldappwFile = AuthConfiguration::$configRoot."/ldap-data/ldap-pw.conf";
+	    //$ldapuserFile = AuthConfiguration::$configRoot."/ldap-data/ldap-user.conf";
+	    //$ldapurlFile = AuthConfiguration::$configRoot."/ldap-data/ldap-url.conf";
+	    //$ldapbasednFile = AuthConfiguration::$configRoot."/ldap-data/ldap-basedn.conf";
+	    //$ldapfilterFile = AuthConfiguration::$configRoot."/ldap-data/ldap-filter.conf";
         
         //load active users from ldap and write initial auth file 
 	    // using ldap bind
-	    $ldaprdn  = trim(file_get_contents($ldapuserFile));     // ldap rdn or dn
-	    $ldappass = trim(file_get_contents($ldappwFile));  // associated password
-	    $ldapurl = trim(file_get_contents($ldapurlFile));
+	    //$ldaprdn  = trim(file_get_contents($ldapuserFile));     // ldap rdn or dn
+	    //$ldappass = trim(file_get_contents($ldappwFile));  // associated password
+	    //$ldapurl = trim(file_get_contents($ldapurlFile));
 	
-	    // connect to ldap server
+	    $ldaprdn = "";
+	    $ldappass = "";
+	    $ldapurl = "";
+	    $base_dn = "";
+	    $filter = "";
+	    $configparams = file(InitAuthConfiguration::$ldapConfFile);    	
+    	foreach ($configparams as $configparam) {
+    		$str="".trim($configparam);
+	    	$keyValuePair=explode("=>",$str);
+	    	switch ($keyValuePair[0]) {
+    			case "ldap-pw":
+			        $ldappass=$keyValuePair[1];
+			        break;
+		    	case "ldap-user":
+			        $ldaprdn=$keyValuePair[1];
+			        break;
+		    	case "ldap-url":
+			        $ldapurl=$keyValuePair[1];
+			        break;
+		    	case "ldap-basedn":
+			        $base_dn=$keyValuePair[1];
+			        break;
+		    	case "ldap-filter":
+			        $filter=$keyValuePair[1];
+			        break;
+	    	}		    	
+    	}
+    	// connect to ldap server
 	    $ldapconn = ldap_connect($ldapurl)
 	            or die("Could not connect to LDAP server.");
 	
@@ -38,8 +71,8 @@
 	             
 	            // verify binding
 	            if ($ldapbind) {
-	                $base_dn=trim(file_get_contents($ldapbasednFile));
-	            	$filter=trim(file_get_contents($ldapfilterFile));
+	                //$base_dn=trim(file_get_contents($ldapbasednFile));
+	            	//$filter=trim(file_get_contents($ldapfilterFile));
 	                
 	                if (!($search=ldap_search($ldapconn,$base_dn,$filter))) {
 					     die("Durchsuchen des LDAP-Servers fehlgeschlagen:".$base_dn."::".$filter);
